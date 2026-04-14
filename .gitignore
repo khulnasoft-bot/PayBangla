@@ -1,0 +1,26 @@
+# WordPress Git Ignore
+# ===================
+
+# Common
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Plugin Specific
+/node_modules/
+/vendor/
+/.idea/
+/.vscode/
+.env
+
+# Images
+images/qr-codes/
+
+# OS generated files
+Icon?
+ehthumbs.db
+.Spotlight-V100
+.Trashes
