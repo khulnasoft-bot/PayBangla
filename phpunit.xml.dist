@@ -7,6 +7,16 @@
 	convertNoticesToExceptions="true"
 	convertWarningsToExceptions="true"
 	>
+	<php>
+		<env name="WP_TESTS_DOMAIN" value="localhost" />
+		<env name="WP_TESTS_EMAIL" value="admin@example.com" />
+		<env name="WP_TESTS_TITLE" value="Test Site" />
+		<env name="WP_PHP_BINARY" value="php" />
+		<env name="DB_NAME" value="wordpress_test" />
+		<env name="DB_USER" value="root" />
+		<env name="DB_PASS" value="root" />
+		<env name="DB_HOST" value="localhost" />
+	</php>
 	<testsuites>
 		<testsuite name="PayBangla Test Suite">
 			<directory prefix="test-" suffix=".php">./tests/</directory>
