@@ -1,4 +1,4 @@
-=== PayBangla: #1 bKash, Rocket & Nagad Gateway for WooCommerce ===
+=== PayBangla ===
 Contributors: khulnasoft
 Tags: bangladesh, mobile banking, sms api, bkash, nagad, rocket, woocommerce, payment gateway
 Requires at least: 5.8
@@ -7,80 +7,61 @@ Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The #1 Mobile Banking solution for WooCommerce in Bangladesh. Features bKash, Rocket, Nagad, and automated SMS notifications.
+🚀 The #1 Premium Mobile Banking & SMS Solution for WooCommerce in Bangladesh. Secure, Fast, and Beautiful.
 
 == Description ==
 
-Looking for the most robust **bKash, Rocket, and Nagad payment gateway** for your **Bangladesh-based WooCommerce** store? **PayBangla** is the ultimate lightweight and secure solution designed specifically for the Bangladeshi market.
+**PayBangla** is the most advanced and feature-rich payment integration for the Bangladeshi market. Designed for speed and security, it allows your customers to pay via **bKash, Rocket, and Nagad** using a modern 3-step interface that minimizes checkout friction and maximizes conversions.
 
-This plugin allows you to accept payments from all major mobile financial services (MFS) in Bangladesh while providing your customers with a premium, high-converting checkout experience.
+### ✨ Why Choose PayBangla?
 
-### Key Features Optimized for Bangladesh:
-*   **Complete MFS Support**: Native support for bKash, Rocket, and Nagad.
-*   **Real-time Transaction ID Check**: Automated AJAX verification to prevent duplicate or fraudulent submissions.
-*   **Premium 3-Step Checkout**: A guided user interface that leads customers through sending money and scanning QR codes.
-*   **Integrated SMS Notifications**: Automatically send order confirmations via SMS using the BulkSMSBD API (expandable).
-*   **Charge/Fee Calculation**: Automatically calculate bKash/Rocket/Nagad "Cash-out" fees and add them to the cart.
-*   **Custom Admin Dashboard**: Monitor recent mobile payments directly from your WordPress home screen.
-*   **QR Code Integration**: Seamlessly upload and display QR codes for each gateway to speed up payments.
+*   **🏆 Premium User Experience**: A beautiful, stepped UI that guides customers through the payment process.
+*   **🛡️ Fraud Prevention**: Automated AJAX Transaction ID verification and unique ID checks to prevent duplicate submissions.
+*   **💬 Integrated SMS Power**: Send automated order updates via BulkSMSBD or Greenweb API using customizable templates.
+*   **💹 Currency Smart**: Automatically converts international order totals (USD, EUR, etc.) to BDT during checkout.
+*   **📊 Merchant Dashboard**: View recent payments and detailed order stats directly from your WordPress dashboard.
+*   **⚡ Lightweight & Fast**: Built with clean, object-oriented code that won't slow down your site.
 
-Please note:
-- This is a woocommerce based plugin so woocommerce plugin must be activated.
-- You must have a bKash or Rocket or Nagad account to get payments.
-- you must have bulksmsbd.com account to integrate sms api
-
-= Using the Plugin =
-
-* Download the plugin, install and active.
-
-* Now go to <strong>WooCommerce</strong> > <strong>Settings</strong> > <strong>bKash/Rocket/Nagad</strong>, location URL would be like below -
-
-`
-http://yourwebsite.domain/wp-admin/admin.php?page=wc-settings&tab=checkout&section=khulnasoft_bkash
-`
-
-* Now you will see few default setup but you need to fill up bKash/Rocket/Nagad account number under <strong>bKash Number/Rocket Number/Nagad Number</strong> field, also you might adjust other fileds too.
-
-* If you want to send sms to users automatically when they order any product, 
-then at first create an account to bulksmsbd.com and recharge some amount to buy sms credit. you will get an option named API in the bulksmsbd dashboard, go to the API page and you will get the API url in that page. after that please login to your wordpress dashboard and then go to
-WooCommerce > SMS API Integration, then insert the api url, your bulksmsbd username and password and save
-
-* That's it. You are ready to go!
+### 🔥 Powerful Developer Tools
+PayBangla is built to be extensible. Use our custom hooks to modify behavior:
+*   `paybangla_bdt_exchange_rate`: Customize the BDT conversion rate dynamically.
+*   `paybangla_sms_args`: Filter SMS parameters before sending.
 
 == Installation ==
 
-You may install the plugin using one of the three following methods:
-
-1. Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
-2. Then activate the plugin.
-3. Go to woocommerce > settings > checkout > bKash / Rocket / Nagad and setup your necessary settings.
-
+1.  **Download & Install**: Upload the `paybangla` folder to your `/wp-content/plugins/` directory.
+2.  **Activate**: Turn on the plugin via the 'Plugins' menu in WordPress.
+3.  **Configure**: Go to **WooCommerce > Settings > Payments** to enable bKash, Rocket, or Nagad.
+4.  **SMS Setup**: Navigate to **WooCommerce > SMS Integration** to set up your API credentials.
 
 == Frequently Asked Questions ==
 
-= What is bKash/Rocket/Nagad? =
-bKash/Rocket/Nagad all of them are mobile financial services in Bangladesh operating under the authority of Bangladesh Bank as a subsidiary of BRAC Bank Limited (bKash), Dutch Bangla Bank (Rocket), Bangladesh Post and Telecommunication Division (Nagad).
+= Do I need a Merchant Account? =
+No! PayBangla works perfectly with Personal, Agent, or Merchant accounts.
 
-= Is it Woocommerce dependent plugin? =
-Yes, You must install and active woocommerce plugin to make this plugin work.
+= Is it secure? =
+Yes. We use Nonce verification, strict input sanitization, and server-side Transaction ID uniqueness checks.
 
-= Is bKash / Rocket / Nagad merchant account necessary? =
-No, it could be personal or agent account.
-
-= Is is secured? =
-Yes definitely, Maintained high level validation in both frontend and backend.
-
+= Does it support auto-fee calculation? =
+Yes. You can set a percentage (e.g., 1.85% for bKash) and it will be added to the order total automatically.
 
 == Screenshots ==
 
-1. **Step-by-Step Checkout UI**: Shows the modern 3-step payment process with QR code and copy button.
-2. **Transaction ID Verification**: Real-time feedback showing successfully validated transaction IDs.
-3. **SMS Integration Dashboard**: Merchants can easily configure their own message templates.
-4. **Admin Overview Widget**: View recent mobile payments directly from your WordPress dashboard.
+1. **Step-by-Step Checkout UI**: Modern 3-step payment flow with QR codes.
+2. **AJAX ID Verification**: Real-time feedback for transaction validation.
+3. **SMS Customization**: Dynamic templates for automated notifications.
+4. **Merchant Dashboard Widget**: Recent payments at a glance.
 
 == Changelog ==
 
-= 0.1.0 =
-* New Feature: SMS Template Customization with placeholders ({order_id}, {customer_name}, etc.).
-* Fraud Protection: Unique Transaction ID verification to prevent duplicate submissions.
-* Code Quality: Implemented abstract base class for gateways to improve maintainability.
+= 1.1.0 =
+* 🏷️ **Complete Rebranding**: Now officially **PayBangla**.
+* 💹 **Currency Support**: Added BDT conversion for international stores.
+* 📊 **Admin Dashboard**: New widget for tracking recent mobile payments.
+* 🧪 **Testing Suite**: Added PHPUnit tests for core logic.
+* 🛡️ **Security+**: Enhanced Transaction ID validation hooks.
+
+= 1.0.0 =
+* 🚀 Initial release with bKash, Rocket, and Nagad support.
+* 🏗️ Modernized base class architecture.
+* 💬 Automated SMS notification system.
