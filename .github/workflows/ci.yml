@@ -23,4 +23,7 @@ jobs:
         run: composer install
 
       - name: Run PHPUnit Tests
-        run: ./vendor/bin/phpunit --configuration phpunit.xml.dist
+        uses: 10up/action-wordpress-plugin-tests@main
+        with:
+          php-version: '7.4'
+          tide: true
